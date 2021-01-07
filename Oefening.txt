@@ -1,0 +1,14 @@
+Oefening 3-lagen architectuur
+Maak een nieuwe solution met als naam Oef3LagenArchitectuur
+Maak hierin 3 projecten :
+- console app (.Net Core)(met als naam ClientPresentatieLaag)
+-class library (.Net Core) (met als naam BusinessLaag)
+-class library (.Net Core) (met als naam DAL)
+1. Leg de juiste project referenties (zie demo)
+2. Maak een BierenDataService class en Interface IBierenDataService in de DAL
+-----------------------eventjes wachten tot uitleg---------------------------------------------
+3. Maak een BierenService class in de BusinessLaag met IBierenService interface
+4. Maak een class Bier in de BusinessLaag
+5. Maak in de BierenService class een public methode GeefAlleBieren die alle bieren teruggeeft in een IList<Bier>
+
+
