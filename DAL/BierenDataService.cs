@@ -8,19 +8,19 @@ namespace DAL
 {
     public class BierenDataService : IBierenDataService
     {
-        private string connString = "Data Source=.;Initial Catalog=BierenDb;Integrated Security=True";
+        private string _connString = "Data Source=.;Initial Catalog=BierenDb;Integrated Security=True";
         public BierenDataService()
         {
-            
-            SqlConnection sqlConnection = new SqlConnection();
-            sqlConnection.ConnectionString = connString;
-            sqlConnection.Open();
-            ConnectionState state = sqlConnection.State;
-            sqlConnection.Close();
+            //Voorbeeld openen en sluiten van connectie naar BierenDb:
+            //SqlConnection sqlConnection = new SqlConnection();
+            //sqlConnection.ConnectionString = _connString;
+            //sqlConnection.Open();
+            //ConnectionState state = sqlConnection.State;
+            //sqlConnection.Close();
         }
         public IList<Bieren> GeefAlleBierenVoorSoort()
         {
-            using (SqlConnection sqlConn = new SqlConnection(connString))
+            using (SqlConnection sqlConn = new SqlConnection(_connString))
             {
                 sqlConn.Open();
                 ConnectionState state = sqlConn.State;
